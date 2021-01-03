@@ -1,0 +1,5 @@
+[client]
+database = sampleSubscription
+user = root
+password = Tejas@12345
+default-character-set = utf8
