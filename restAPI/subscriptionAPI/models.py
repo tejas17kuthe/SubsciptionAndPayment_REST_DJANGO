@@ -1,5 +1,4 @@
 from django.db import models
-
 # Create your models here.
 class ManagerDetails(models.Model):
     email = models.EmailField(primary_key=True)
@@ -10,7 +9,7 @@ class ManagerDetails(models.Model):
     dob = models.DateField()
     company = models.CharField(max_length=50)
 
-class SubscriptionDetatils(models.Model):
+class SubscriptionDetails(models.Model):
     sub_id = models.IntegerField(primary_key=True)
     subscription_name = models.CharField(max_length=50)
     amount = models.IntegerField()
@@ -25,7 +24,7 @@ class PaymentDetails(models.Model):
 class PaymentHistory(models.Model):
     email = models.ForeignKey(ManagerDetails,on_delete=models.CASCADE)
     card_number = models.CharField(max_length=17)
-    sub_id = models.ForeignKey(SubscriptionDetatils,on_delete=models.CASCADE)
+    sub_id = models.ForeignKey(SubscriptionDetails,on_delete=models.CASCADE)
     amount = models.IntegerField()
     date_time = models.DateTimeField()
 
