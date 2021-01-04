@@ -12,7 +12,7 @@ class ManagerDetailsSerializer(serializers.ModelSerializer):
 class SubscriptionDetatilsSeializer(serializers.ModelSerializer):
     class Meta:
         model = SubscriptionDetails
-        fields = ['__all__'] # sub_id,subscription_name,amount,duration
+        fields = ['sub_id','subscription_name','amount','duration'] # sub_id,subscription_name,amount,duration
 
         
 class PaymentDetailsSeializer(serializers.ModelSerializer):
@@ -28,7 +28,7 @@ class PaymentHistorySeializer(serializers.ModelSerializer):
 
 
 class UserSerializer(serializers.ModelSerializer):
-    
+
     class Meta:
         model = User
         fields = ['id','username','password']

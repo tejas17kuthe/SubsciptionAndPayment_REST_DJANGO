@@ -13,7 +13,7 @@ class SubscriptionDetails(models.Model):
     sub_id = models.IntegerField(primary_key=True)
     subscription_name = models.CharField(max_length=50)
     amount = models.IntegerField()
-    duration = models.IntegerField()
+    duration = models.IntegerField(default=1)
 
 class PaymentDetails(models.Model):
     email = models.ForeignKey(ManagerDetails,on_delete=models.CASCADE)
