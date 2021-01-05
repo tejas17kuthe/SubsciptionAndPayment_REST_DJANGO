@@ -8,14 +8,14 @@
 ## Step 1: Installation, project cloning and python environment setup
 
 #### Python download link : 
-`https://www.python.org/downloads/`
+##### `https://www.python.org/downloads/`
 
 #### mysql download link : 
-Installaing file download : `https://dev.mysql.com/downloads/mysql/` \
-Download MySql workbench( optional ) : `https://www.mysql.com/products/workbench/`
+##### Installaing file download : `https://dev.mysql.com/downloads/mysql/` \
+##### Download MySql workbench( optional ) : `https://www.mysql.com/products/workbench/`
 
 #### Clone the repo :
-```git clone https://github.com/tejas17kuthe/SubsciptionAndPayment_REST_DJANGO.git```
+##### ```git clone https://github.com/tejas17kuthe/SubsciptionAndPayment_REST_DJANGO.git```
 
 ##### Folder Structure:
 ```
@@ -33,10 +33,10 @@ Download MySql workbench( optional ) : `https://www.mysql.com/products/workbench
 ```
 
 #### Open command promp or terminal and cd into the downloaded folder
-` cd SubsciptionAndPayment_REST_DJANGO`
+##### ` cd SubsciptionAndPayment_REST_DJANGO`
 
 #### Install python virtaulenv package
- ` pip install virtualenv `  or  ` pip3 install virtualenv ` 
+##### ` pip install virtualenv `  or  ` pip3 install virtualenv ` 
  
 #### Create Virtual environament and activate it
 
@@ -47,12 +47,12 @@ Download MySql workbench( optional ) : `https://www.mysql.com/products/workbench
 ## step 2: Resolve dependancies and run the project
 
 #### Install requirement.txt
-` cd restAPI`
+##### ` cd restAPI`
 
 ##### `pip install -r requirements.txt` 
 
 #### Go to mysql_details and change the .cnf file details for database connection
-` cd mysql_details `
+##### ` cd mysql_details `
 
 ##### To Edit file mac and linux you can execute ` nano connection.cnf` and in windows you can use text editor to edit the file.
 
@@ -77,3 +77,8 @@ mysql > exit;
 Bye
 
 ```
+
+#### Go to restAPI
+##### `cd ..`
+##### 'python manage.py makemigrations'
+
