@@ -80,5 +80,42 @@ Bye
 
 #### Go to restAPI
 ##### `cd ..`
-##### 'python manage.py makemigrations'
+##### `python manage.py makemigrations`
+#### `python manage.py migrate`
+This will create tables in database
+#### Now create an admin user to perform admin operations like adding new manager details.
+```
+python manage.py createsuperuser 
+Username (leave blank to use 'tejaskuthe'): <User name of your choice>
+Email address: <your email id>
+Password: < password >
+Password (again): < confirm password >
+Superuser created successfully.
+
+```
+Installation and dependencies completed. Now start django server
+#### `python manage.py runserver`
+#### You should see
+```
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 05, 2021 - 12:38:32
+Django version 2.0.2, using settings 'restAPI.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+```
+##### congratulation application is running successfully
+
+## Step 3: Using postman and API endpoints.
+
+#### Download and Install Postman.
+#### link `https://www.postman.com/downloads/`
+
+#### User Login API POST request `http://127.0.0.1:8000/login/`
+ 
+```
+This api is used to log into the server
+```
 
