@@ -130,3 +130,16 @@ If we want we can also specifically allow admin user to create manager account a
 ```
 ![Review](/Images/signupapi.png)
 
+
+
+#### `Subscription API`
+![Review](/Images/subscriptionapi.png)
+
+### Get all manaer details
+![Review](/Images/managerdetailapi.png)
+
+### Payment Get Has API
+![Review](/Images/paymentapi.png)
+
+### Sending Received JSON with hash to payu money api
+![Review](/Images/payupaymentapi.png)
