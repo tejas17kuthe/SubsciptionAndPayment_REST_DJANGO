@@ -110,9 +110,10 @@ Quit the server with CONTROL-C.
 
 ## Step 3: Using postman and API endpoints.
 
-#### Download and Install Postman.
-#### link `https://www.postman.com/downloads/`
+### Download and Install Postman.
+####       link `https://www.postman.com/downloads/`
 
+### API
 #### User `Login API` POST request `http://127.0.0.1:8000/login/`
  
 ```
