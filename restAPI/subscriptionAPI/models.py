@@ -15,17 +15,3 @@ class SubscriptionDetails(models.Model):
     amount = models.IntegerField()
     duration = models.IntegerField(default=1)
 
-class PaymentDetails(models.Model):
-    email = models.ForeignKey(ManagerDetails,on_delete=models.CASCADE)
-    card_number = models.CharField(max_length=17)
-    expire_month = models.CharField(max_length=2) # Here you will have to convert  value to in while using
-    expire_year = models.CharField(max_length=2)
-
-class PaymentHistory(models.Model):
-    email = models.ForeignKey(ManagerDetails,on_delete=models.CASCADE)
-    card_number = models.CharField(max_length=17)
-    sub_id = models.ForeignKey(SubscriptionDetails,on_delete=models.CASCADE)
-    amount = models.IntegerField()
-    date_time = models.DateTimeField()
-
-

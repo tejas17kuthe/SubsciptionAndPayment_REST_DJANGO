@@ -1,17 +1,18 @@
-from django.shortcuts import render
 from rest_framework.views import APIView
-from subscriptionAPI.serializers import ManagerDetailsSerializer,SubscriptionDetatilsSeializer,PaymentDetailsSeializer,PaymentHistorySeializer,UserSerializer
-from subscriptionAPI.models import ManagerDetails,SubscriptionDetails,PaymentDetails,PaymentHistory
+from subscriptionAPI.serializers import ManagerDetailsSerializer,SubscriptionDetatilsSeializer,UserSerializer
+from subscriptionAPI.models import ManagerDetails,SubscriptionDetails
 from rest_framework.response import Response
 from django.contrib.auth.models import User
 from rest_framework import permissions
 from rest_framework import status
 from django.http import JsonResponse
-import stripe 
-# Create your views here.
+from restAPI.settings import PAYU_MERCHANT_KEY, PAYU_MERCHANT_SALT
+from django.template import Context, Template,RequestContext
+from payu import gateway
 
-stripe.api_key = 'sk_test_4eC39HqLyjWDarjtT1zdp7dc'
 
+# Create your views here
+YOUR_DOMAIN = 'http://localhost:8000'
 class ManagerDetailsView(APIView):
     """
     This view can only be accessed by admin user as it diplays all the details about the manager table
@@ -109,3 +110,77 @@ class CreateUserView(APIView):
             return Response(serializer_manager.errors, status = status.HTTP_400_BAD_REQUEST)
 
 
+import uuid
+
+#Generating hash key for sending the data to payu server.
+class PaymentGenerateHashView(APIView):
+    permission_classes = [permissions.AllowAny]
+    
+    def post(self,request):
+        data = request.data
+        txnid = uuid.uuid1()
+        data['txnid'] = txnid
+        key = PAYU_MERCHANT_KEY
+        salt = PAYU_MERCHANT_SALT
+        PAYU_BASE_URL = gateway.payu_url() 
+        action = PAYU_BASE_URL
+        data['hash'] = gateway.get_hash(data) # get Hash
+        data['action'] = action
+        data['salt'] = salt
+        data['key'] = key
+        return Response(data)
+        
+#Check if your transaction which is performed is same as the we sent to the payu server.
+#This function accepts the json object received from payu after performing 
+#the trandaction
+#/confirmtransaction/
+#This view internally stores data into payu.transaction table in the database
+#This entry is important for further executions like cancel transaction , refund etc.
+class ConfirmTransactionView(APIView):
+
+    def post(self,request):
+        if gateway.check_hash(request.data):
+            return Response({"Transaction has been Successful."})
+        else:
+            return Response({"Transaction has been Failed."})
+
+#Verify the status of the transaction
+class VerifyTransactionView(APIView):
+    permission_classes = [permissions.AllowAny]
+
+    def post(self,request):
+        data = request.data
+        return Response(gateway.verify_payment(data['txnid']))
+
+    # Example Successful Response
+    """
+    {
+        "status":1,"msg":"Transaction Fetched Successfully", 
+        "transaction_details": {"mihpayid": "MIHPayID","request_id":"","bank_ref_num":"Bank Reference Number",
+                                "amt":"Amount", "disc":"Discount","mode":"Transaction Mode (NB for Netbanking, CC for credit card, DC for Debit card, '-' for unknown)",
+                                "status":"Transaction Status"}
+    }
+    """
+
+
+class CancelTransactionView(APIView):
+    
+    def post(self,request):
+        response = gateway.cancel_transaction(request.data["mihpayid"], request.data["Amount"])
+        return response
+    # Example Successful Responses
+    """
+        {"status": 1, "msg": "Cancel Request Queued", "request_id": "RequestID", "mihpayid": "MIHPayID", "bank_ref_num": "Bank Reference Number"}
+    """
+
+    # Example Failure Response
+    """
+        {"status": 0, "msg":"Cancel request failed"}
+    """
+
+#This is used for request for refund by passing the mahpayid and amount. These values should be reveived from the 
+# payu.transaction database
+class RefundTransactionView(APIView):
+    
+    def post(self,request):
+        return Response(gateway.refund_transaction(request.data["mahpayid"],request.data["amount"]))

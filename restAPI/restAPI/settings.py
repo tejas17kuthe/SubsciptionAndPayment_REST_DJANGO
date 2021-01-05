@@ -27,10 +27,15 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
+#Payu settings
+PAYU_MERCHANT_KEY = "LwIipSsr"
+PAYU_MERCHANT_SALT = "ZL7hfBhyCV"
+PAYU_MODE = "TEST"
+app_label = 'payu'
 # Application definition
 
 INSTALLED_APPS = [
+    'payu',
     'rest_framework',
     'subscriptionAPI.apps.SubscriptionapiConfig',
     'django.contrib.admin',
