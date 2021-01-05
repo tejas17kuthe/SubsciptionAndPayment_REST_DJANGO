@@ -138,8 +138,11 @@ If we want we can also specifically allow admin user to create manager account a
 ### Get all manaer details
 ![Review](/Images/managerdetailapi.png)
 
-### Payment Get Has API
+### Payment Get Hash API
 ![Review](/Images/paymentapi.png)
 
 ### Sending Received JSON with hash to payu money api
+```
+This page shows that the data which sent to payu money server is correct but due to the verification of the account it is not proceding forward. Once the payu money account documentation is verified then we can perform payments.
+```
 ![Review](/Images/payupaymentapi.png)
