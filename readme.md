@@ -123,5 +123,10 @@ Admin user and manager both can login to the server.
 ![Review](/Images/loginapi.png)
 
 #### Create new manager account. `Signup API` POST request `http://127.0.0.1:8000/signup/`
+```
+This api does not require any login password to perform action. 
+As the user which will be creating the account will a first time user.
+If we want we can also allow only admin user to create account, this operation will need update in the application. 
+```
 ![Review](/Images/signupapi.png)
 
