@@ -80,5 +80,9 @@ Bye
 
 #### Go to restAPI
 ##### `cd ..`
-##### 'python manage.py makemigrations'
+##### `python manage.py makemigrations`
+#### `python manage.py migrate`
+This will create tables in database
 
+Installation and dependencied completed. Now start djnago server
+#### `python manage.py runserver`
