@@ -44,7 +44,7 @@ Download MySql workbench( optional ) : `https://www.mysql.com/products/workbench
 
 ##### Activate : mac and linux ` source ./env_restAPI/bin/activate `  
 
-## step 2: Install requrement.txt and run the project
+## step 2: Resolve dependancies and run the project
 
 #### Install requirement.txt
 ` cd restAPI`
@@ -65,12 +65,15 @@ default-character-set = utf8
 ```
 and save the file 
 
-##### Now you have to create a blank schema in mysql. You can do this by using MySql workbench or mysql shell.
+##### Now you have to create a blank schema in mysql by name `sampleSubscription`. You can do this by using MySql workbench or mysql shell.
 mysql shell command
 ```
 mysql -u <yout mysql username> -p
 
 mysql > CREATE SCHEMA `sampleSubscription`;
 Query OK, 1 row affected (0.00 sec)
+
+mysql > exit;
+Bye
 
 ```
