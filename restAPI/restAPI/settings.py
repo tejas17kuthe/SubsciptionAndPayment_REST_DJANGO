@@ -90,7 +90,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'OPTIONS': {
-            'read_default_file': '/Users/tejaskuthe/Documents/tejas-kuthe/Tejas-Kuthe-Docs/JOB/Mind_bowser/SubsciptionAndPayment_REST_DJANGO/mysql_details/connection.cnf',
+            'read_default_file': '/Users/tejaskuthe/Documents/tejas-kuthe/Tejas-Kuthe-Docs/JOB/Mind_bowser/SubsciptionAndPayment_REST_DJANGO/restAPI/mysql_details/connection.cnf',
             'init_command' : 'SET default_storage_engine = INNODB',
         },
     }
