@@ -53,7 +53,8 @@ Download MySql workbench( optional ) : `https://www.mysql.com/products/workbench
 
 #### Go to mysql_details and change the .cnf file details for database connection
 ` cd mysql_details `
-##### Edit file mac and linux ` nano connection.cnf` and in windows you can use texteditor to edit the file.
+
+##### To Edit file mac and linux you can execute ` nano connection.cnf` and in windows you can use text editor to edit the file.
 
 ```
 [client]
@@ -63,3 +64,13 @@ password = <Enter your mysql password>
 default-character-set = utf8
 ```
 and save the file 
+
+##### Now you have to create a blank schema in mysql. You can do this by using MySql workbench or mysql shell.
+mysql shell command
+```
+mysql -u <yout mysql username> -p
+
+mysql > CREATE SCHEMA `sampleSubscription`;
+Query OK, 1 row affected (0.00 sec)
+
+```
