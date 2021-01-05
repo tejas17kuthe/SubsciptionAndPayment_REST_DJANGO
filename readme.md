@@ -119,19 +119,8 @@ Quit the server with CONTROL-C.
 This api is used to log into the server.
 Admin user and manager both can login to the server.
 ```
+![Review](/Images/loginapi.png)
 
 #### Create new manager account. `Signup API` POST request `http://127.0.0.1:8000/signup/`
-'''
-JSON body
-    {
-        "email": "tejas112@gmail.com",
-        "first_name": "tejas",
-        "last_name": "kuthe",
-        "password": "123",
-        "address": "nagpur",
-        "dob": "1993-01-17",
-        "company": "AT"
-    }
-'''
-
+![Review](/Images/signupapi.png)
 
