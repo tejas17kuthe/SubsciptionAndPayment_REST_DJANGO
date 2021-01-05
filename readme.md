@@ -113,9 +113,25 @@ Quit the server with CONTROL-C.
 #### Download and Install Postman.
 #### link `https://www.postman.com/downloads/`
 
-#### User Login API POST request `http://127.0.0.1:8000/login/`
+#### User `Login API` POST request `http://127.0.0.1:8000/login/`
  
 ```
-This api is used to log into the server
+This api is used to log into the server.
+Admin user and manager both can login to the server.
 ```
+
+#### Create new manager account. `Signup API` POST request `http://127.0.0.1:8000/signup/`
+'''
+JSON body
+    {
+        "email": "tejas112@gmail.com",
+        "first_name": "tejas",
+        "last_name": "kuthe",
+        "password": "123",
+        "address": "nagpur",
+        "dob": "1993-01-17",
+        "company": "AT"
+    }
+'''
+
 
