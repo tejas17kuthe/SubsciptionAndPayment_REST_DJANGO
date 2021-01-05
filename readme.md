@@ -146,6 +146,9 @@ If we want we can also specifically allow admin user to create manager account a
 This page shows that the data which sent to payu money 
 server is correct but due to the verification of the 
 account it is not proceding forward. Once the payu money
-account documentation is verified then we can perform payments.
+account documentation verification is complete then we can perform payments.
 ```
 ![Review](/Images/payupaymentapi.png)
+
+### Other apis are dependent on the previous api's resutl as other api execute by acception `mihpayid`
+
