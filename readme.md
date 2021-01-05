@@ -143,9 +143,9 @@ If we want we can also specifically allow admin user to create manager account a
 
 ### Sending Received JSON with hash to payu money api
 ```
-This page shows that the data which sent to payu money \
-server is correct but due to the verification of the \
-account it is not proceding forward. Once the payu money\
+This page shows that the data which sent to payu money 
+server is correct but due to the verification of the 
+account it is not proceding forward. Once the payu money
 account documentation is verified then we can perform payments.
 ```
 ![Review](/Images/payupaymentapi.png)
