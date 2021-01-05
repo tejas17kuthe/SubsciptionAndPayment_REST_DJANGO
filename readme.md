@@ -95,3 +95,15 @@ Superuser created successfully.
 ```
 Installation and dependencies completed. Now start django server
 #### `python manage.py runserver`
+#### You should see
+```
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 05, 2021 - 12:38:32
+Django version 2.0.2, using settings 'restAPI.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+```
+##### congratulation application is running successfully
