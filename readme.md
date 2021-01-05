@@ -107,3 +107,15 @@ Quit the server with CONTROL-C.
 
 ```
 ##### congratulation application is running successfully
+
+## Step 3: Using postman and API endpoints.
+
+#### Download and Install Postman.
+#### link `https://www.postman.com/downloads/`
+
+#### User Login API POST request `http://127.0.0.1:8000/login/`
+ 
+```
+This api is used to log into the server
+```
+
