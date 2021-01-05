@@ -5,7 +5,7 @@
 ![Review](/Images/codegrip_review.png)
 
 
-## Step 1: Install Python 3.9, clone the github repo and setup python environment
+## Step 1: Install Python 3.9, mysql, clone the github repo and setup python environment
 
 #### Python download link : 
 `https://www.python.org/downloads/`
@@ -17,7 +17,7 @@
 ` cd SubsciptionAndPayment_REST_DJANGO`
 
 #### Install python virtaulenv package
- ` pip install virtualenv `
+ ` pip install virtualenv `  or  ` pip3 install virtualenv ` 
  
 #### Create Virtual environament and activate it
 
@@ -25,4 +25,9 @@
 
 ##### Activate : mac and linux ` source ./env_restAPI/bin/activate `  
 
-## step 2
+## step 2: Install requrement.txt and run the project
+
+#### Install requirement.txt
+` cd restAPI `
+
+##### `pip install -r requirements.txt` 
