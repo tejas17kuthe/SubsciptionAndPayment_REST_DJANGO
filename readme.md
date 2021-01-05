@@ -16,7 +16,7 @@
 #### Clone the repo :
 ```git clone https://github.com/tejas17kuthe/SubsciptionAndPayment_REST_DJANGO.git```
 
-#### Open command promp or terminal and cd into the downloaded forlder
+#### Open command promp or terminal and cd into the downloaded folder
 ` cd SubsciptionAndPayment_REST_DJANGO`
 
 #### Install python virtaulenv package
