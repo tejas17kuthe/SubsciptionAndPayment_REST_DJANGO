@@ -97,14 +97,14 @@ class CreateUserView(APIView):
     #Create new user
     def post(self,request,format = None):
         serializer_manager = ManagerDetailsSerializer(data = request.data) 
-        #serializer = UserSerializer(data = request.data)
+        
         if serializer_manager.is_valid():
             serializer_manager.save()
             username = serializer_manager.data['email']
             password = serializer_manager.data['password']
             first_name = serializer_manager.data['first_name']
             last_name = serializer_manager.data['last_name']
-            user = User.objects.create_user(username=username,email=username,password=password,first_name = first_name,last_name=last_name)
+            User.objects.create_user(username=username,email=username,password=password,first_name = first_name,last_name=last_name)
             return Response({"User created Successfully"})
         else:
             return Response(serializer_manager.errors, status = status.HTTP_400_BAD_REQUEST)
