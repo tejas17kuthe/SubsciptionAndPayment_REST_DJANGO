@@ -11,7 +11,8 @@
 `https://www.python.org/downloads/`
 
 #### mysql download link : 
-`https://dev.mysql.com/downloads/mysql/`
+Installaing file download : `https://dev.mysql.com/downloads/mysql/`
+Download MySql workbench( optional ) : `https://www.mysql.com/products/workbench/`
 
 #### Clone the repo :
 ```git clone https://github.com/tejas17kuthe/SubsciptionAndPayment_REST_DJANGO.git```
