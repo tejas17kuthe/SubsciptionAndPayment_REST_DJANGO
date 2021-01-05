@@ -84,5 +84,5 @@ Bye
 #### `python manage.py migrate`
 This will create tables in database
 
-Installation and dependencied completed. Now start djnago server
+Installation and dependencies completed. Now start djnago server
 #### `python manage.py runserver`
