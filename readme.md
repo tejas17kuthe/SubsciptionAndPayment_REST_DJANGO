@@ -151,4 +151,10 @@ account documentation verification is complete then we can perform payments.
 ![Review](/Images/payupaymentapi.png)
 
 ### Other apis are dependent on the previous api's resutl as other api execute by accepting `mihpayid`
+```
+http://127.0.0.1:8000/Confirmtransaction/
+http://127.0.0.1:8000/refundpayment/
+http://127.0.0.1:8000/verifypayment/
+http://127.0.0.1:8000/canceltransaction/
+```
 
