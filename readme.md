@@ -150,5 +150,5 @@ account documentation verification is complete then we can perform payments.
 ```
 ![Review](/Images/payupaymentapi.png)
 
-### Other apis are dependent on the previous api's resutl as other api execute by acception `mihpayid`
+### Other apis are dependent on the previous api's resutl as other api execute by accepting `mihpayid`
 
