@@ -15,3 +15,8 @@ class SubscriptionDetails(models.Model):
     amount = models.IntegerField()
     duration = models.IntegerField(default=1)
 
+class SubscriptionHistory(models.Model):
+    email = models.ForeignKey(ManagerDetails,on_delete=models.CASCADE)
+    sub_id = models.ForeignKey(SubscriptionDetails,on_delete=models.CASCADE)
+    status = models.BooleanField()
+    
