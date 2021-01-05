@@ -83,6 +83,15 @@ Bye
 ##### `python manage.py makemigrations`
 #### `python manage.py migrate`
 This will create tables in database
+#### Now create an admin user to perform admin operations like adding new manager details.
+```
+python manage.py createsuperuser 
+Username (leave blank to use 'tejaskuthe'): <User name of your choice>
+Email address: <your email id>
+Password: < password >
+Password (again): < confirm password >
+Superuser created successfully.
 
+```
 Installation and dependencies completed. Now start django server
 #### `python manage.py runserver`
