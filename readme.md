@@ -5,10 +5,13 @@
 ![Review](/Images/codegrip_review.png)
 
 
-## Step 1: Install Python 3.9, mysql, clone the github repo and setup python environment
+## Step 1: Installation, project cloning and python environment setup
 
 #### Python download link : 
 `https://www.python.org/downloads/`
+
+#### mysql download link : 
+`https://dev.mysql.com/downloads/mysql/`
 
 #### Clone the repo :
 ```git clone https://github.com/tejas17kuthe/SubsciptionAndPayment_REST_DJANGO.git```
