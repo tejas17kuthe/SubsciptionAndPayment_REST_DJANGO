@@ -17,6 +17,21 @@ Download MySql workbench( optional ) : `https://www.mysql.com/products/workbench
 #### Clone the repo :
 ```git clone https://github.com/tejas17kuthe/SubsciptionAndPayment_REST_DJANGO.git```
 
+##### Folder Structure:
+```
+└── SubsciptionAndPayment_REST_DJANGO
+    ├── mysql_details
+    └── restAPI
+        ├── images
+        ├── mysql_details
+        ├── restAPI
+        │   └── __pycache__
+        └── subscriptionAPI
+            ├── __pycache__
+            └── migrations
+                └── __pycache__
+```
+
 #### Open command promp or terminal and cd into the downloaded folder
 ` cd SubsciptionAndPayment_REST_DJANGO`
 
@@ -32,6 +47,8 @@ Download MySql workbench( optional ) : `https://www.mysql.com/products/workbench
 ## step 2: Install requrement.txt and run the project
 
 #### Install requirement.txt
-` cd restAPI `
+` cd restAPI`
 
 ##### `pip install -r requirements.txt` 
+
+#### Go to mysql
