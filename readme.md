@@ -51,4 +51,15 @@ Download MySql workbench( optional ) : `https://www.mysql.com/products/workbench
 
 ##### `pip install -r requirements.txt` 
 
-#### Go to mysql
+#### Go to mysql_details and change the .cnf file details for database connection
+` cd mysql_details `
+##### Edit file mac and linux ` nano connection.cnf` and in windows you can use texteditor to edit the file.
+
+```
+[client]
+database = sampleSubscription
+user = <Enter your mysql username>
+password = <Enter your mysql password>
+default-character-set = utf8
+```
+and save the file 
