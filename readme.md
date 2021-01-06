@@ -11,7 +11,7 @@
 ##### `https://www.python.org/downloads/`
 
 #### mysql download link : 
-##### Installaing file download : `https://dev.mysql.com/downloads/mysql/` \
+##### download mysql : `https://dev.mysql.com/downloads/mysql/` 
 ##### Download MySql workbench( optional ) : `https://www.mysql.com/products/workbench/`
 
 #### Clone the repo :
@@ -129,4 +129,32 @@ As the user which will be creating the account will be a first time user.
 If we want we can also specifically allow admin user to create manager account and restrict all other users from creating an account, this operation will need update in the application. 
 ```
 ![Review](/Images/signupapi.png)
+
+
+
+#### `Subscription API`
+![Review](/Images/subscriptionapi.png)
+
+### Get all manaer details
+![Review](/Images/managerdetailapi.png)
+
+### Payment Get Hash API
+![Review](/Images/paymentapi.png)
+
+### Sending Received JSON with hash to payu money api
+```
+This page shows that the data which sent to payu money 
+server is correct but due to the verification of the 
+account it is not proceding forward. Once the payu money
+account documentation verification is complete then we can perform payments.
+```
+![Review](/Images/payupaymentapi.png)
+
+### Other apis are dependent on the previous api's resutl as other api execute by accepting `mihpayid`
+```
+http://127.0.0.1:8000/Confirmtransaction/
+http://127.0.0.1:8000/refundpayment/
+http://127.0.0.1:8000/verifypayment/
+http://127.0.0.1:8000/canceltransaction/
+```
 
