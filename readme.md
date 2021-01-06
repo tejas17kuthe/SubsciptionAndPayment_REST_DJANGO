@@ -11,7 +11,7 @@
 ##### `https://www.python.org/downloads/`
 
 #### mysql download link : 
-##### download mysql : `https://dev.mysql.com/downloads/mysql/` \
+##### download mysql : `https://dev.mysql.com/downloads/mysql/` 
 ##### Download MySql workbench( optional ) : `https://www.mysql.com/products/workbench/`
 
 #### Clone the repo :
