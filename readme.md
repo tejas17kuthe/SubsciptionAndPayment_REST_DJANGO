@@ -84,15 +84,17 @@ Bye
 #### `python manage.py migrate`
 This will create tables in database
 #### Now create an admin user to perform admin operations like adding new manager details.
+#### For testing the login api provided in postman collection file please use following super user details. If you create super user with differnt details please change the details in the login api.
 ```
 python manage.py createsuperuser 
 Username (leave blank to use 'tejaskuthe'): <User name of your choice>
-Email address: <your email id>
-Password: < password >
-Password (again): < confirm password >
+Email address: tejas@gmail.com  
+Password: TejasKuthe@123
+Password (again): TejasKuthe@123
 Superuser created successfully.
 
 ```
+
 Installation and dependencies completed. Now start django server
 #### `python manage.py runserver`
 #### You should see
