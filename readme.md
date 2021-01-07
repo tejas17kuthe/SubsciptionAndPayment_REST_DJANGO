@@ -87,7 +87,7 @@ This will create tables in database
 #### For testing the login api provided in postman collection file please use following super user details. If you create super user with differnt details please change the details in the login api.
 ```
 python manage.py createsuperuser 
-Username (leave blank to use 'tejaskuthe'): <User name of your choice>
+Username (leave blank to use 'tejaskuthe'): tejas@gmail.com
 Email address: tejas@gmail.com  
 Password: TejasKuthe@123
 Password (again): TejasKuthe@123
