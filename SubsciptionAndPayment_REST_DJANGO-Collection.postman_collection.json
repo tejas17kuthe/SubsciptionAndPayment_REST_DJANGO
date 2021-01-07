@@ -1,0 +1,509 @@
+{
+	"info": {
+		"_postman_id": "e9effe48-645b-46ab-a407-2392c85d2750",
+		"name": "SubsciptionAndPayment_REST_DJANGO-Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login and Signup",
+			"item": [
+				{
+					"name": "http://127.0.0.1:8000/login/",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "TejasKuthe@123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "tejas@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"sub_id\":\"02\",\n    \"subscription_name\":\"Super\",\n    \"amount\":\"200\",\n    \"duration\":\"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/login/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8000/signup/",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n            \"email\": \"tejas1122@gmail.com\",\n            \"first_name\": \"tejas\",\n            \"last_name\": \"kuthe\",\n            \"password\": \"123\",\n            \"address\": \"nagpur\",\n            \"dob\": \"1993-01-17\",\n            \"company\": \"AT\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/signup/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"signup",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8000/managerdetails/all/",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "TejasKuthe@123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "tejas@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n            \"email\": \"tejas111@gmail.com\",\n            \"first_name\": \"tejas\",\n            \"last_name\": \"kuthe\",\n            \"password\": \"123\",\n            \"address\": \"nagpur\",\n            \"dob\": \"1993-01-17\",\n            \"company\": \"AT\"\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/managerdetails/all/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"managerdetails",
+								"all",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Subscription",
+			"item": [
+				{
+					"name": "http://127.0.0.1:8000/subscriptions/",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "TejasKuthe@123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "tejas@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"sub_id\":\"02\",\n        \"subscription_name\":\"Super\",\n        \"amount\":\"200\",\n        \"duration\":\"1\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/subscriptions/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"subscriptions",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8000/subscriptions/",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "TejasKuthe@123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "tejas@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"sub_id\":\"02\",\n        \"subscription_name\":\"Super\",\n        \"amount\":\"200\",\n        \"duration\":\"1\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/subscriptions/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"subscriptions",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Payment",
+			"item": [
+				{
+					"name": "http://127.0.0.1:8000/payment/",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "TejasKuthe@123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "tejas@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"txnid\":\"\",\n    \"amount\":\"100\",\n    \"productinfo\":\"bag\",\n    \"firstname\":\"tejas\",\n    \"lastname\":\"kuthe\",\n    \"email\":\"tejas@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/payment/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"payment",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://test.payu.in/_payment",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "TejasKuthe@123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "tejas@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "key",
+									"value": "LwIipSsr",
+									"type": "text"
+								},
+								{
+									"key": "amount",
+									"value": "1000",
+									"type": "text"
+								},
+								{
+									"key": "firstname",
+									"value": "tejas",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "9403494034",
+									"type": "text"
+								},
+								{
+									"key": "productinfo",
+									"value": "{“paymentParts”:[{ \"name\":\"abc\",\n\"description\":\"abcd\",\n\"value\":\"500\",\n\"isRequired\":\"true\",\n“settlementEvent” : “EmailConfirmation” },\n{\n\"name\":\"xyz\",\n\"description\":\"wxyz\",\n\"value\":\"1500\",\n\"isRequired\":\"false\",\n“settlementEvent”: “EmailConfirmation” }],\n{“paymentIdentifiers”:[{ \"field\":\"CompletionDate\",\n}, {\n\"value\":\"31/10/2012”\n\"field\":\"TxnId\", \"value\":\"abced\"\n                      \n }]}",
+									"type": "text"
+								},
+								{
+									"key": "surl",
+									"value": "www.google.com",
+									"type": "text"
+								},
+								{
+									"key": "furl",
+									"value": "www.google.com",
+									"type": "text"
+								},
+								{
+									"key": "service_provider",
+									"value": "payu_paisa",
+									"type": "text"
+								},
+								{
+									"key": "hash",
+									"value": "b3c5c63679dba1026adde4048cc5355e39d51d15363963dfaeb61d93efd7db1cd78eb9ccd877c8e96b36243b14114d52b3b3aedf3c429b1464a4bd010e2e6d64",
+									"type": "text"
+								},
+								{
+									"key": "txnid",
+									"value": "fbacbc20-4f20-11eb-9d79-acde48001122",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "tejas17kuthe@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "salt",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://test.payu.in/_payment",
+							"protocol": "https",
+							"host": [
+								"test",
+								"payu",
+								"in"
+							],
+							"path": [
+								"_payment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8000/verifypayment/",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "TejasKuthe@123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "tejas@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"txnid\":\"fbacbc20-4f20-11eb-9d79-acde48001122\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/verifypayment/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"verifypayment",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "TejasKuthe@123",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "tejas@gmail.com",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
