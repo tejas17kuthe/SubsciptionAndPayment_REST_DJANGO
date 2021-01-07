@@ -126,7 +126,6 @@ class PaymentGenerateHashView(APIView):
         action = PAYU_BASE_URL
         data['hash'] = gateway.get_hash(data) # get Hash
         data['action'] = action
-        data['salt'] = salt
         data['key'] = key
         return Response(data)
         
